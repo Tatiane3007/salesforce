@@ -41,6 +41,43 @@ public with sharing class ClasseDemonstraEstrutura
 
     }
 
+    //desafio soma numeros com controle de decisão
+    public static Integer desafioSomaComCOntroleDeDecisao(Integer pValorParametro1, Integer pValorParametro2){
+
+        Integer resultadoVariavel = pValorParametro1 + pValorParametro2;//primeiro somamos os valores dos parâmetros
+
+        //verificamos se o parâmetro 1 é maior do que 5
+        if(pValorParametro1 > 5){
+            //se for maior do que 5, soma mais dois
+            resultadoVariavel = resultadoVariavel + 2;
+        }
+
+        return resultadoVariavel; //resultado retornado
+    }
+
+    //exemplo controle de decisão com várias comparações
+    public static Integer exemploManipulandoCondicoes(Integer pValorParametro1, Integer pValorParametro2, Boolean pSempreSoma2){
+
+        Integer resultadoVariavel = pValorParametro1 + pValorParametro2;//primeiro somamos os valores dos parâmetros
+
+        //verificamos se o parâmetro 1 é maior do que 5 e menor do que 10
+        if( ((pValorParametro1 > 5 && pValorParametro1 < 10) || pValorParametro1 == 20) && pSempreSoma2 == true){
+            //se for maior do que 5 e menor do que 10, soma mais dois
+            resultadoVariavel = resultadoVariavel + 2;
+        }
+
+        //if de uma linha - lógica
+        //resultado = (condicao) ? verdadeiro : falso;
+
+        system.debug('resultadoVariavel '+ resultadoVariavel);
+
+        return resultadoVariavel; //resultado retornado
+    }
+
+    //exemplo controle de decisão com várias comparações em uma linha
+    public static Integer exemploManipulandoCondicoesUmaLinha(Integer pValorParametro1, Integer pValorParametro2, Boolean pSempreSoma2){
+
+        return pValorParametro1 + pValorParametro2 + ( (((pValorParametro1 > 5 && pValorParametro1 < 10) || pValorParametro1 == 20) && pSempreSoma2 == true) ? 2 : 0 ) ; //resultado retornado
+    }
+
 }
-
-
